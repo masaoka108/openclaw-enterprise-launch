@@ -1,25 +1,25 @@
 {
   "id": "openclaw-enterprise-launch",
-  "title": "OpenClaw 企業導入支援サービス",
-  "description": "100〜1,000名規模の中堅企業向けに、AI導入をPoC止まりにさせず現場定着・ガバナンス整備まで伴走する導入支援サービス",
+  "title": "OpenClaw 企業導入サービス | 最終成果物",
+  "description": "最終成果物だけをまとめた公開ページ。LP、提案スライド、提案書、料金、PLのみ表示。",
   "created_at": "2026-03-17T12:42:37.091Z",
-  "updated_at": "2026-03-17T13:05:44.125Z",
+  "updated_at": "2026-03-17T13:44:09.925Z",
   "artifacts": [
     {
       "id": "lp-final",
       "type": "lp",
       "title": "ランディングページ（最終版）",
-      "description": "Nano Banana Pro画像入りの最終LP",
+      "description": "Nano Banana Pro画像5枚入りの最終LP",
       "url": "lp/",
-      "created_at": "2026-03-17T22:00:00+09:00"
+      "created_at": "2026-03-17T22:44:00+09:00"
     },
     {
       "id": "slides-final-html",
       "type": "slides",
       "title": "提案スライド（最終版 / HTML）",
-      "description": "画像入りの営業提案デッキ",
+      "description": "画像中心・11枚構成の営業提案デッキ",
       "url": "https://masaoka108.github.io/openclaw-enterprise-support-deck/",
-      "created_at": "2026-03-17T22:00:00+09:00"
+      "created_at": "2026-03-17T22:44:00+09:00"
     },
     {
       "id": "slides-final-pptx",
@@ -27,23 +27,23 @@
       "title": "提案スライド（PPTX）",
       "description": "ダウンロード用 PowerPoint",
       "url": "https://masaoka108.github.io/openclaw-enterprise-support-deck/openclaw-enterprise-support-deck-2026-03-17.pptx",
-      "created_at": "2026-03-17T22:00:00+09:00"
+      "created_at": "2026-03-17T22:44:00+09:00"
     },
     {
       "id": "proposal-final",
       "type": "other",
       "title": "営業1ページ提案書（最終版）",
-      "description": "画像入りの営業向け1ページ提案書",
+      "description": "画像入りHTML提案書",
       "html_file": "executive-proposal.html",
-      "created_at": "2026-03-17T22:00:00+09:00"
+      "created_at": "2026-03-17T22:44:00+09:00"
     },
     {
       "id": "pricing-final",
       "type": "pricing",
       "title": "料金設計（最終版）",
-      "description": "最終料金テーブルと価格ロジック",
+      "description": "確定価格レンジと商談用価格ロジック",
       "html_file": "pricing-reference.html",
-      "created_at": "2026-03-17T22:00:00+09:00"
+      "created_at": "2026-03-17T22:44:00+09:00"
     },
     {
       "id": "pl-final",
@@ -51,7 +51,7 @@
       "title": "3年PL予測（最終版）",
       "description": "通常シナリオ基準のPLと黒字化条件",
       "html_file": "pl-reference.html",
-      "created_at": "2026-03-17T22:00:00+09:00"
+      "created_at": "2026-03-17T22:44:00+09:00"
     },
     {
       "id": "service-menu-final",
@@ -59,7 +59,7 @@
       "title": "正式サービスメニュー",
       "description": "導入範囲・オプション・契約ポリシー",
       "html_file": "service-menu-reference.html",
-      "created_at": "2026-03-17T22:00:00+09:00"
+      "created_at": "2026-03-17T22:44:00+09:00"
     }
   ],
   "github": {
