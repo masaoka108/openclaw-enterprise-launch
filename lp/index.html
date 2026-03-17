@@ -41,9 +41,10 @@
     </header>
 
     <main id="main">
-      <section id="top" class="section section-dark hero">
+      <section id="top" class="section section-dark hero hero-background">
+        <div class="hero-backdrop" aria-hidden="true"></div>
         <div class="container hero-grid">
-          <div class="hero-copy">
+          <div class="hero-copy hero-copy-panel">
             <div class="eyebrow">B2B向け / 中堅・成長企業向け / 1部署から導入可能</div>
             <h1>社内AI活用を、<br />実験で終わらせない。</h1>
             <p class="hero-lead">
@@ -67,9 +68,6 @@
           </div>
 
           <div class="hero-visual-wrap">
-            <figure class="hero-figure">
-              <img src="./assets/2026-03-17-22-35-hero-enterprise-ai-adoption.png" alt="企業の複数部門でAI導入を進めるB2B向けヒーロービジュアル" />
-            </figure>
             <div class="hero-proof card">
               <div class="proof-kpis">
                 <div><strong>20〜40%</strong><span>重点業務の工数削減目安</span></div>
@@ -95,6 +93,14 @@
                 </div>
               </div>
             </div>
+            <div class="hero-gallery" aria-label="導入イメージの補足ビジュアル">
+              <figure class="hero-thumb">
+                <img src="./assets/2026-03-17-22-35-phases-assess-pilot-rollout.png" alt="AI導入を診断・パイロット導入・全社展開の3段階で進める図版" />
+              </figure>
+              <figure class="hero-thumb">
+                <img src="./assets/2026-03-17-22-35-governance-usability-balance.png" alt="AI導入でガバナンスと使いやすさを両立させる概念図" />
+              </figure>
+            </div>
           </div>
         </div>
       </section>
@@ -113,6 +119,14 @@
             <div class="eyebrow eyebrow-accent">Problem</div>
             <h2>AI導入が止まる論点は、だいたいこの3つです。</h2>
             <p>経営・情シス・現場の論点を同時に整理しないと、PoCは進んでも本番運用で止まります。</p>
+          </div>
+          <div class="section-visual-band section-visual-band-tight">
+            <figure class="section-figure band-figure">
+              <img src="./assets/2026-03-17-22-35-hero-enterprise-ai-adoption.png" alt="複数部門の関係者がAI導入方針を整理している様子のビジュアル" />
+            </figure>
+            <figure class="section-figure band-figure">
+              <img src="./assets/2026-03-17-22-35-usecases-enterprise-ai.png" alt="部門別のAIユースケースを俯瞰する図版" />
+            </figure>
           </div>
           <div class="cards cards-3 compact-cards">
             <article class="card problem-card">
@@ -292,6 +306,9 @@
             <h2>価格は、意思決定しやすい4段階で提示します。</h2>
             <p>入口は小さく、本番は十分に。<strong>値引きではなく、スコープ調整で最適化</strong>する前提の料金設計です。</p>
           </div>
+          <figure class="section-figure pricing-hero-figure wide-figure">
+            <img src="./assets/2026-03-17-22-35-kpi-adoption-expansion.png" alt="KPI設計と部門展開に応じて支援範囲が拡張していく様子を示す図版" />
+          </figure>
           <div class="cards cards-4 plan-grid">
             <article class="card plan-card highlight">
               <div class="plan-topline">入口商品</div>
@@ -380,12 +397,13 @@
       </section>
 
       <section class="section" id="faq">
-        <div class="container">
-          <div class="section-heading narrow center">
-            <div class="eyebrow eyebrow-accent">FAQ</div>
-            <h2>導入前によくある質問</h2>
-          </div>
-          <div class="faq-list">
+        <div class="container faq-layout">
+          <div>
+            <div class="section-heading narrow center left-on-desktop">
+              <div class="eyebrow eyebrow-accent">FAQ</div>
+              <h2>導入前によくある質問</h2>
+            </div>
+            <div class="faq-list">
             <details class="faq-item" open>
               <summary>OpenClawが自社に合うか、まだ判断できていません。</summary>
               <p>問題ありません。無料相談や導入診断で、業務内容・体制・セキュリティ要件を踏まえて、向いている始め方を整理します。</p>
@@ -407,10 +425,19 @@
               <p>あります。月次レビュー、改善提案、新規ユースケース追加など、定着と成果化のための伴走支援をご用意しています。</p>
             </details>
           </div>
+          <div class="visual-column faq-visual-column">
+            <figure class="section-figure small-figure sticky-figure">
+              <img src="./assets/2026-03-17-22-35-governance-usability-balance.png" alt="導入前に確認すべきガバナンスと使いやすさの論点を示す図版" />
+            </figure>
+            <figure class="section-figure small-figure">
+              <img src="./assets/2026-03-17-22-35-phases-assess-pilot-rollout.png" alt="導入相談から段階的に展開していく進め方を示す図版" />
+            </figure>
+          </div>
         </div>
       </section>
 
       <section class="section section-dark final-cta" id="contact">
+        <div class="final-cta-backdrop" aria-hidden="true"></div>
         <div class="container final-cta-inner">
           <div>
             <div class="eyebrow">Final CTA</div>
@@ -422,6 +449,9 @@
             </p>
           </div>
           <div class="cta-card card">
+            <figure class="section-figure cta-figure">
+              <img src="./assets/2026-03-17-22-35-hero-enterprise-ai-adoption.png" alt="無料相談で導入の進め方を整理しているイメージビジュアル" />
+            </figure>
             <p class="cta-card-title">ご相談で整理できること</p>
             <div class="cta-stack">
               <a class="button button-primary" href="https://github.com/masaoka108/openclaw-enterprise-launch/issues/new" target="_blank" rel="noreferrer">無料相談を予約する</a>

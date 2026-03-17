@@ -74,12 +74,39 @@ h3 { font-size: 1.2rem; font-weight: 700; }
 }
 .eyebrow-accent { color: var(--primary); }
 .hero { padding: 56px 0 90px; }
-.hero-grid, .split-grid, .final-cta-inner, .media-steps, .section-stack {
+.hero-background, .final-cta { position: relative; overflow: hidden; isolation: isolate; }
+.hero-backdrop, .final-cta-backdrop {
+  position: absolute; inset: 0; pointer-events: none;
+  background-size: cover; background-position: center;
+}
+.hero-backdrop {
+  background-image:
+    linear-gradient(100deg, rgba(8, 16, 29, 0.88) 8%, rgba(8, 16, 29, 0.76) 40%, rgba(8, 16, 29, 0.58) 100%),
+    url('./assets/2026-03-17-22-35-hero-enterprise-ai-adoption.png');
+  opacity: 1;
+}
+.final-cta-backdrop {
+  background-image:
+    linear-gradient(110deg, rgba(8, 16, 29, 0.88), rgba(11, 18, 32, 0.78)),
+    url('./assets/2026-03-17-22-35-kpi-adoption-expansion.png');
+  background-position: center right;
+  opacity: 0.4;
+}
+.hero-grid, .split-grid, .final-cta-inner, .media-steps, .section-stack, .faq-layout {
   display: grid; gap: 32px;
 }
-.hero-grid, .split-grid, .final-cta-inner { grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr); align-items: start; }
+.hero-grid, .split-grid, .final-cta-inner, .faq-layout { grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr); align-items: start; }
 .section-stack { gap: 40px; }
 .hero-lead { margin-top: 20px; font-size: 18px; max-width: 700px; }
+.hero-copy-panel {
+  position: relative;
+  padding: 36px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 28px;
+  background: rgba(11, 18, 32, 0.46);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(10px);
+}
 .hero-tags, .trust-items, .cards, .proof-kpis, .mini-compare, .timeline, .faq-list, .cta-row, .cta-stack, .two-col-list, .usecase-grid {
   display: grid; gap: 16px;
 }
@@ -117,12 +144,25 @@ h3 { font-size: 1.2rem; font-weight: 700; }
   border-radius: var(--radius); box-shadow: var(--shadow);
 }
 .card { padding: 24px; }
-.section-figure, .hero-figure { overflow: hidden; }
-.hero-figure img, .section-figure img { width: 100%; height: 100%; object-fit: cover; }
+.section-figure, .hero-figure, .hero-thumb { overflow: hidden; }
+.hero-figure img, .section-figure img, .hero-thumb img { width: 100%; height: 100%; object-fit: cover; }
 .hero-figure img { aspect-ratio: 16/10; }
-.large-figure img { aspect-ratio: 16/9; }
-.small-figure img { aspect-ratio: 4/3; }
+.large-figure img, .wide-figure img { aspect-ratio: 16/9; }
+.small-figure img, .hero-thumb img { aspect-ratio: 4/3; }
+.band-figure img { aspect-ratio: 16/10; }
 .hero-visual-wrap { display: grid; gap: 20px; }
+.hero-gallery, .section-visual-band {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.hero-thumb {
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.06);
+  box-shadow: var(--shadow-soft);
+}
+.section-visual-band-tight { margin-bottom: 24px; }
 .hero-proof { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.12); box-shadow: none; }
 .proof-kpis { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 .proof-kpis strong, .price { display: block; font-size: 30px; font-weight: 800; color: #fff; }
@@ -177,8 +217,13 @@ h3 { font-size: 1.2rem; font-weight: 700; }
 .faq-item summary { cursor: pointer; font-weight: 700; list-style: none; }
 .faq-item summary::-webkit-details-marker { display: none; }
 .faq-item p { margin-top: 12px; }
+.left-on-desktop { text-align: left; margin-left: 0; margin-right: 0; }
+.faq-visual-column { position: relative; }
+.sticky-figure { position: sticky; top: 104px; }
 .final-cta { padding-bottom: 120px; }
 .cta-card { background: rgba(255,255,255,0.98); }
+.cta-figure { margin-bottom: 20px; }
+.cta-figure img { aspect-ratio: 16/9; }
 .mini-list { margin-top: 16px; }
 .floating-cta {
   position: fixed; right: 16px; bottom: 16px; z-index: 90; display: none;
@@ -187,8 +232,10 @@ h3 { font-size: 1.2rem; font-weight: 700; }
 }
 
 @media (max-width: 1180px) {
-  .hero-grid, .split-grid, .final-cta-inner, .trust-items, .cards-3, .cards-4 { grid-template-columns: 1fr; }
-  .cards-2, .proof-kpis, .compact-timeline, .pricing-summary, .mini-compare, .two-col-list, .hero-tags { grid-template-columns: 1fr; }
+  .hero-grid, .split-grid, .final-cta-inner, .trust-items, .cards-3, .cards-4, .faq-layout { grid-template-columns: 1fr; }
+  .cards-2, .proof-kpis, .compact-timeline, .pricing-summary, .mini-compare, .two-col-list, .hero-tags, .hero-gallery, .section-visual-band { grid-template-columns: 1fr; }
+  .left-on-desktop { text-align: center; margin-left: auto; margin-right: auto; }
+  .sticky-figure { position: static; }
 }
 
 @media (max-width: 820px) {
@@ -202,6 +249,6 @@ h3 { font-size: 1.2rem; font-weight: 700; }
 
 @media (max-width: 560px) {
   .container { width: min(calc(100% - 24px), var(--container)); }
-  .card, .faq-item, .timeline-item { padding: 20px; border-radius: 20px; }
+  .card, .faq-item, .timeline-item, .hero-copy-panel { padding: 20px; border-radius: 20px; }
   .button { width: 100%; }
 }
