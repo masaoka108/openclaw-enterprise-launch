@@ -53,7 +53,7 @@ img { display: block; max-width: 100%; }
 }
 .brand { font-weight: 800; letter-spacing: -0.02em; }
 .desktop-nav { display: flex; gap: 24px; color: var(--text-body); font-size: 15px; }
-.desktop-nav a:hover, .desktop-nav a:focus-visible, .hero-links a:hover, .hero-links a:focus-visible { color: var(--primary); }
+.desktop-nav a:hover, .desktop-nav a:focus-visible, .hero-links a:hover, .hero-links a:focus-visible, .text-link:hover, .text-link:focus-visible { color: var(--primary); }
 .hero { padding: 56px 0 88px; }
 .hero-grid, .split-section, .final-cta-inner, .fit-box, .overview-media-grid {
   display: grid; gap: 32px; align-items: start;
@@ -84,7 +84,7 @@ p { margin: 0; color: var(--text-body); }
 }
 .cta-row, .cta-stack { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 32px; }
 .hero-links { margin-top: 14px; }
-.hero-links a { font-weight: 600; text-decoration: underline; text-underline-offset: 4px; }
+.hero-links a, .text-link { font-weight: 600; text-decoration: underline; text-underline-offset: 4px; }
 .button {
   display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 0 20px;
   border-radius: 999px; font-weight: 700; border: 1px solid transparent; transition: 0.2s ease;
