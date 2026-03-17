@@ -101,6 +101,14 @@
       "description": "ダウンロード用 PowerPoint",
       "url": "artifacts/openclaw-enterprise-support-deck.pptx",
       "created_at": "2026-03-17T21:15:00+09:00"
+    },
+    {
+      "id": "lp-live",
+      "type": "lp",
+      "title": "ランディングページ（実体）",
+      "description": "GitHub Pagesで見えるLP本体",
+      "url": "lp/index.html",
+      "created_at": "2026-03-17T21:24:30+09:00"
     }
   ],
   "github": {
