@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>料金プラン</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    body {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans JP', sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    h1, h2, h3 { color: #2c3e50; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+    th { background: #f5f5f5; }
+    code {
+      background: #f4f4f4;
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+    pre {
+      background: #f4f4f4;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>OpenClaw Enterprise導入支援 料金プラン（叩き台）</h1>
+<p>更新日: 2026-03-17<br>前提: researcher の競合調査待ちのため、現時点では<strong>仮説ベースの初版</strong>。pricing-calculator を用いて原価感を確認しつつ、営業現場で使いやすい形に再構成しています。</p>
+<hr>
+<h2>1. どんな課題に対する提案か</h2>
+<p>企業が OpenClaw を導入する際は、単なるライセンス販売よりも以下の支援が必要になりやすいです。</p>
+<ul>
+<li>どの業務に AI エージェントを入れるべきかの整理</li>
+<li>セキュリティ・権限・監査ログの設計</li>
+<li>Slack / Notion / Google Workspace / 社内システム連携</li>
+<li>現場定着のための運用設計・教育</li>
+<li>導入後の改善サイクル（プロンプト改善、ワークフロー改修、KPIレビュー）</li>
+</ul>
+<p>そのため、<strong>初期導入費 + 月額運用支援 + カスタム開発費</strong>の3本建てが最も売りやすく、収益性も設計しやすいです。</p>
+<hr>
+<h2>2. 料金方針</h2>
+<ul>
+<li>ポジショニング: <strong>プレミアム寄りのミッド〜ハイ</strong></li>
+<li>売り方: 「AIツール販売」ではなく<strong>業務変革の伴走支援</strong>として提案</li>
+<li>価格ロジック:<ul>
+<li>初期導入費 = 要件整理・設計・環境構築・初期教育の対価</li>
+<li>月額 = 定着支援・改善運用・問い合わせ対応・定例レビューの対価</li>
+<li>カスタム開発費 = 個別連携 / 特殊ワークフロー / ガバナンス要件への対応</li>
+</ul>
+</li>
+</ul>
+<p>pricing-calculator の試算では、想定固定費ベースで<strong>月額損益分岐は約8社</strong>。ただし実務上は営業・立ち上げ負荷を考慮し、<strong>黒字化の目安は 6〜8社を狙うより、Business 5社前後またはEnterprise 2〜3社</strong>を基準に見るのが妥当です。</p>
+<hr>
+<h2>3. 推奨料金プラン</h2>
+<h3>Plan A. Pilot / 部門導入</h3>
+<ul>
+<li><strong>初期導入費:</strong> 50万円</li>
+<li><strong>月額:</strong> 30万円</li>
+<li><strong>対象:</strong> 1部署・スモールスタート・PoC〜初期運用</li>
+<li><strong>含む内容:</strong><ul>
+<li>導入ワークショップ 1回</li>
+<li>ユースケース整理（2〜3件）</li>
+<li>基本設定 / 権限設計</li>
+<li>Slack 等の標準連携</li>
+<li>月1回の定例レビュー</li>
+<li>メール / チャットサポート</li>
+</ul>
+</li>
+<li><strong>想定顧客:</strong> まず成果を1部門で作りたい企業</li>
+</ul>
+<h3>Plan B. Business / 全社展開準備</h3>
+<ul>
+<li><strong>初期導入費:</strong> 120万円</li>
+<li><strong>月額:</strong> 70万円</li>
+<li><strong>対象:</strong> 複数部門展開・本番運用を見据える企業</li>
+<li><strong>含む内容:</strong><ul>
+<li>導入ワークショップ 2〜3回</li>
+<li>業務要件整理 / 導入ロードマップ作成</li>
+<li>主要SaaS連携の設定</li>
+<li>利用ルール / ガイドライン整備支援</li>
+<li>月2回の定例レビュー</li>
+<li>改善提案・簡易チューニング</li>
+<li>優先サポート</li>
+</ul>
+</li>
+<li><strong>想定顧客:</strong> AI活用を本格運用へ移したい中堅企業</li>
+</ul>
+<h3>Plan C. Enterprise / 全社導入・高ガバナンス対応</h3>
+<ul>
+<li><strong>初期導入費:</strong> 300万円〜</li>
+<li><strong>月額:</strong> 150万円〜</li>
+<li><strong>対象:</strong> 大企業・高セキュリティ・複数システム連携あり</li>
+<li><strong>含む内容:</strong><ul>
+<li>全社導入設計 / 部門横断ユースケース整理</li>
+<li>セキュリティ / 監査 / 権限設計の支援</li>
+<li>SSO / ログ / 承認フロー等の高度要件整理</li>
+<li>定例会（週次〜隔週）</li>
+<li>KPI設計 / 導入効果レポート</li>
+<li>専任窓口</li>
+<li>SLA 個別協議</li>
+</ul>
+</li>
+<li><strong>想定顧客:</strong> 全社標準基盤として導入したい企業</li>
+</ul>
+<hr>
+<h2>4. カスタム開発費</h2>
+<h3>標準メニュー</h3>
+<ul>
+<li><strong>軽微カスタム:</strong> 150万円〜<ul>
+<li>例: 既存テンプレートの調整、簡易API連携、画面やプロンプトの個社最適化</li>
+</ul>
+</li>
+<li><strong>中規模開発:</strong> 300万〜500万円<ul>
+<li>例: 社内DB連携、権限連動、業務ワークフロー自動化</li>
+</ul>
+</li>
+<li><strong>大規模開発:</strong> 800万円〜<ul>
+<li>例: 複数システム統合、独自監査要件、オンプレ/閉域要件対応</li>
+</ul>
+</li>
+</ul>
+<h3>見積ルール（営業運用しやすい形）</h3>
+<ul>
+<li>要件定義前は<strong>レンジ提示</strong></li>
+<li>個別見積は以下で分解<ul>
+<li>要件定義</li>
+<li>開発</li>
+<li>テスト</li>
+<li>導入支援</li>
+<li>保守</li>
+</ul>
+</li>
+<li>受注しやすくするため、最初は<ul>
+<li><strong>導入費で設計部分を回収</strong></li>
+<li><strong>開発費で個別要件を回収</strong></li>
+<li><strong>月額で継続改善を回収</strong>
+の切り分けを明確にする</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>5. 値引きルール（叩き台）</h2>
+<ul>
+<li>年額一括契約: <strong>月額10%ディスカウントまで</strong></li>
+<li>初年度の導入キャンペーン: <strong>初期導入費20%引きまで</strong></li>
+<li>値引きよりも、以下で調整する方が粗利を守りやすい<ul>
+<li>定例回数を減らす</li>
+<li>対象部門数を絞る</li>
+<li>カスタム範囲を分割する</li>
+<li>SLAを標準に戻す</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2>6. 営業で使う提案の見せ方</h2>
+<h3>推奨アンカリング</h3>
+<ol>
+<li>まず Enterprise を見せる</li>
+<li>次に Business を本命として提案する</li>
+<li>予算が厳しい先に Pilot を提示する</li>
+</ol>
+<p>この順にすると、<strong>Business 70万円/月が相対的に受け入れられやすい</strong>です。</p>
+<h3>価値訴求の言い方</h3>
+<ul>
+<li>「AIを導入します」ではなく</li>
+<li><strong>「問い合わせ対応・情報検索・定型業務の初動を自動化し、現場工数を20〜40%削減するための伴走支援です」</strong></li>
+</ul>
+<hr>
+<h2>7. 参考: pricing-calculator の原価試算メモ</h2>
+<p>社内の pricing-calculator による試算では、想定固定費 513万円/月の前提で以下のレンジが出ています。</p>
+<ul>
+<li>スタンダード: 約42.4万円/月</li>
+<li>ビジネス: 約127.3万円/月</li>
+<li>エンタープライズ: 約254.7万円/月</li>
+</ul>
+<p>ただしこの出力は<strong>原価回収を優先した機械的レンジ</strong>で、営業の通しやすさや日本企業の導入ハードルを考えると、そのままでは上位プランが重く見えます。<br>そのため実運用では、</p>
+<ul>
+<li>Pilot を入口商品として30万円/月</li>
+<li>Business を本命商品として70万円/月</li>
+<li>Enterprise を個別見積で150万円/月〜</li>
+</ul>
+<p>に再設計するのが現実的です。</p>
+<hr>
+<h2>8. このプランの狙い</h2>
+<ul>
+<li><strong>低単価ライセンス勝負を避ける</strong></li>
+<li>初年度から導入費と開発費でキャッシュを作る</li>
+<li>月額で継続改善を積み上げる</li>
+<li>大企業案件は Enterprise とカスタム開発で粗利を取りにいく</li>
+</ul>
+<hr>
+<h2>9. 次回アップデートで入れたいもの</h2>
+<p>researcher の成果物が来たら、以下を更新すると精度が上がります。</p>
+<ul>
+<li>競合価格帯（AI導入支援、Copilot導入支援、AIエージェント内製化支援）</li>
+<li>業界別の許容予算</li>
+<li>導入期間の実績値</li>
+<li>失注理由別のプラン調整案</li>
+<li>社数別のCS工数モデル</li>
+</ul>
+
+  <hr>
+  <p><a href="../index.html">← プロジェクトトップに戻る</a></p>
+</body>
+</html>

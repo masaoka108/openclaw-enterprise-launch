@@ -1,0 +1,64 @@
+{
+  "id": "openclaw-enterprise-launch",
+  "title": "OpenClaw 企業導入サービス",
+  "description": "企業向けOpenClaw導入・運用支援サービス",
+  "created_at": "2026-03-17T11:01:50.518Z",
+  "updated_at": "2026-03-17T11:15:24.976Z",
+  "artifacts": [
+    {
+      "id": "report-1773746124477",
+      "type": "report",
+      "title": "競合調査レポート",
+      "description": "競合8社の比較・相場・差別化ポイント",
+      "created_at": "2026-03-17T11:15:24.477Z",
+      "source_file": "/Users/okamuramasahiro/.openclaw/workspace-researcher/projects/openclaw-enterprise-launch/competitive-analysis.md",
+      "html_file": "report-1773746124477.html"
+    },
+    {
+      "id": "pricing-1773746124574",
+      "type": "pricing",
+      "title": "料金プラン",
+      "description": "Pilot / Business / Enterprise の料金設計",
+      "created_at": "2026-03-17T11:15:24.574Z",
+      "source_file": "/Users/okamuramasahiro/.openclaw/workspace-sales/projects/openclaw-enterprise-launch/pricing.md",
+      "html_file": "pricing-1773746124574.html"
+    },
+    {
+      "id": "report-1773746124667",
+      "type": "report",
+      "title": "3年PL予測",
+      "description": "保守・通常・楽観の3シナリオPL",
+      "created_at": "2026-03-17T11:15:24.667Z",
+      "source_file": "/Users/okamuramasahiro/.openclaw/workspace-sales/projects/openclaw-enterprise-launch/pl-forecast.md",
+      "html_file": "report-1773746124667.html"
+    },
+    {
+      "id": "lp-1773746124763",
+      "type": "lp",
+      "title": "LPワイヤーフレーム",
+      "description": "企業向け導入支援サービスのLP構成案",
+      "created_at": "2026-03-17T11:15:24.763Z",
+      "source_file": "/Users/okamuramasahiro/.openclaw/workspace-uiux/projects/openclaw-enterprise-launch/lp-wireframe.md",
+      "html_file": "lp-1773746124763.html"
+    },
+    {
+      "id": "slides-1773746124857",
+      "type": "slides",
+      "title": "提案スライド構成案",
+      "description": "営業提案用スライドの12枚構成案",
+      "created_at": "2026-03-17T11:15:24.857Z",
+      "source_file": "/Users/okamuramasahiro/.openclaw/workspace-marketing/projects/openclaw-enterprise-launch/slide-outline.md",
+      "html_file": "slides-1773746124857.html"
+    },
+    {
+      "id": "other-1773746124952",
+      "type": "other",
+      "title": "MVP構成案",
+      "description": "導入サービスのMVP定義と実装優先順位",
+      "created_at": "2026-03-17T11:15:24.952Z",
+      "source_file": "/Users/okamuramasahiro/.openclaw/workspace-builder/projects/openclaw-enterprise-launch/mvp-plan.md",
+      "html_file": "other-1773746124952.html"
+    }
+  ],
+  "github": null
+}

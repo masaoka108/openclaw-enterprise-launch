@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3年PL予測</title>
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <style>
+    body {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans JP', sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+    h1, h2, h3 { color: #2c3e50; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 12px;
+      text-align: left;
+    }
+    th { background: #f5f5f5; }
+    code {
+      background: #f4f4f4;
+      padding: 2px 6px;
+      border-radius: 3px;
+    }
+    pre {
+      background: #f4f4f4;
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>OpenClaw Enterprise導入支援 3年PL予測（叩き台）</h1>
+<p>更新日: 2026-03-17<br>前提: 初版は researcher の競合・市場データ待ちのため、<strong>現時点の仮説ベース</strong>で作成。pl-forecast のデフォルト出力は顧客成長が指数的で楽観に振れやすかったため、ここでは<strong>営業現場で説明可能な獲得社数・単価前提に補正</strong>した手動PLを採用しています。</p>
+<hr>
+<h2>1. 前提条件</h2>
+<h3>商品前提</h3>
+<ul>
+<li>主要販売プラン<ul>
+<li>Pilot: 初期50万円 / 月額30万円</li>
+<li>Business: 初期120万円 / 月額70万円</li>
+<li>Enterprise: 初期300万円〜 / 月額150万円〜</li>
+</ul>
+</li>
+<li>カスタム開発費: 150万円〜800万円以上</li>
+</ul>
+<h3>PLモデル化の考え方</h3>
+<p>売上を以下の3つに分けて見ます。</p>
+<ol>
+<li><strong>月額売上（MRR）</strong><br>継続支援・運用改善・定例会・問い合わせ対応</li>
+<li><strong>初期導入売上</strong><br>要件整理、設定、ワークショップ、教育</li>
+<li><strong>カスタム開発売上</strong><br>個別連携、ワークフロー構築、追加開発</li>
+</ol>
+<h3>コストの考え方</h3>
+<ul>
+<li>売上原価: 導入・運用・サポート・LLM/API・インフラを含め**売上の20〜24%**で置く</li>
+<li>販管費: セールス、CS、ソリューション、管理部門等の固定費を年次で増員前提で置く</li>
+<li>税率: 黒字年度は概算 30%</li>
+</ul>
+<hr>
+<h2>2. シナリオ前提</h2>
+<table>
+<thead>
+<tr>
+<th>シナリオ</th>
+<th align="right">Year1平均稼働社数</th>
+<th align="right">Year2平均稼働社数</th>
+<th align="right">Year3平均稼働社数</th>
+<th>コメント</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>保守</td>
+<td align="right">3社</td>
+<td align="right">8社</td>
+<td align="right">13社</td>
+<td>受注は進むが大型化は限定的</td>
+</tr>
+<tr>
+<td>通常</td>
+<td align="right">5社</td>
+<td align="right">15社</td>
+<td align="right">30社</td>
+<td>Business中心に順調拡大</td>
+</tr>
+<tr>
+<td>楽観</td>
+<td align="right">8社</td>
+<td align="right">25社</td>
+<td align="right">50社</td>
+<td>大手導入が複数走る</td>
+</tr>
+</tbody></table>
+<h3>売上単価の置き方</h3>
+<ul>
+<li><strong>保守:</strong> blended MRR 55万円 / 新規導入100万円 / カスタム付帯率30%</li>
+<li><strong>通常:</strong> blended MRR 75万円 / 新規導入140万円 / カスタム付帯率40%</li>
+<li><strong>楽観:</strong> blended MRR 95万円 / 新規導入200万円 / カスタム付帯率50%</li>
+</ul>
+<p>※ blended MRR は各プラン構成比を均した平均月額。</p>
+<hr>
+<h2>3. 3年PL予測</h2>
+<h2>保守シナリオ</h2>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th align="right">Year1</th>
+<th align="right">Year2</th>
+<th align="right">Year3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>売上高</td>
+<td align="right">¥29,400,000</td>
+<td align="right">¥65,600,000</td>
+<td align="right">¥101,800,000</td>
+</tr>
+<tr>
+<td>売上原価</td>
+<td align="right">¥7,056,000</td>
+<td align="right">¥15,744,000</td>
+<td align="right">¥24,432,000</td>
+</tr>
+<tr>
+<td>粗利益</td>
+<td align="right">¥22,344,000</td>
+<td align="right">¥49,856,000</td>
+<td align="right">¥77,368,000</td>
+</tr>
+<tr>
+<td>販管費</td>
+<td align="right">¥42,000,000</td>
+<td align="right">¥48,000,000</td>
+<td align="right">¥54,000,000</td>
+</tr>
+<tr>
+<td>営業利益</td>
+<td align="right">¥-19,656,000</td>
+<td align="right">¥1,856,000</td>
+<td align="right">¥23,368,000</td>
+</tr>
+<tr>
+<td>純利益</td>
+<td align="right">¥-19,656,000</td>
+<td align="right">¥1,299,200</td>
+<td align="right">¥16,357,600</td>
+</tr>
+<tr>
+<td>営業利益率</td>
+<td align="right">-66.9%</td>
+<td align="right">2.8%</td>
+<td align="right">23.0%</td>
+</tr>
+</tbody></table>
+<h3>見立て</h3>
+<ul>
+<li>Year1 は赤字</li>
+<li>Year2 でほぼ損益分岐を超える</li>
+<li>Year3 でようやく安定黒字</li>
+<li>市場立ち上がりが遅い場合の下限ラインとして使える</li>
+</ul>
+<hr>
+<h2>通常シナリオ</h2>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th align="right">Year1</th>
+<th align="right">Year2</th>
+<th align="right">Year3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>売上高</td>
+<td align="right">¥71,000,000</td>
+<td align="right">¥174,000,000</td>
+<td align="right">¥322,000,000</td>
+</tr>
+<tr>
+<td>売上原価</td>
+<td align="right">¥15,620,000</td>
+<td align="right">¥38,280,000</td>
+<td align="right">¥70,840,000</td>
+</tr>
+<tr>
+<td>粗利益</td>
+<td align="right">¥55,380,000</td>
+<td align="right">¥135,720,000</td>
+<td align="right">¥251,160,000</td>
+</tr>
+<tr>
+<td>販管費</td>
+<td align="right">¥42,000,000</td>
+<td align="right">¥54,000,000</td>
+<td align="right">¥66,000,000</td>
+</tr>
+<tr>
+<td>営業利益</td>
+<td align="right">¥13,380,000</td>
+<td align="right">¥81,720,000</td>
+<td align="right">¥185,160,000</td>
+</tr>
+<tr>
+<td>純利益</td>
+<td align="right">¥9,366,000</td>
+<td align="right">¥57,204,000</td>
+<td align="right">¥129,612,000</td>
+</tr>
+<tr>
+<td>営業利益率</td>
+<td align="right">18.8%</td>
+<td align="right">47.0%</td>
+<td align="right">57.5%</td>
+</tr>
+</tbody></table>
+<h3>見立て</h3>
+<ul>
+<li>Year1 から黒字化可能</li>
+<li>Businessプラン中心で再現性の高い成長パターン</li>
+<li>最も社内説明しやすい基準ケース</li>
+</ul>
+<hr>
+<h2>楽観シナリオ</h2>
+<table>
+<thead>
+<tr>
+<th>項目</th>
+<th align="right">Year1</th>
+<th align="right">Year2</th>
+<th align="right">Year3</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>売上高</td>
+<td align="right">¥158,700,000</td>
+<td align="right">¥397,500,000</td>
+<td align="right">¥727,500,000</td>
+</tr>
+<tr>
+<td>売上原価</td>
+<td align="right">¥31,740,000</td>
+<td align="right">¥79,500,000</td>
+<td align="right">¥145,500,000</td>
+</tr>
+<tr>
+<td>粗利益</td>
+<td align="right">¥126,960,000</td>
+<td align="right">¥318,000,000</td>
+<td align="right">¥582,000,000</td>
+</tr>
+<tr>
+<td>販管費</td>
+<td align="right">¥42,000,000</td>
+<td align="right">¥60,000,000</td>
+<td align="right">¥78,000,000</td>
+</tr>
+<tr>
+<td>営業利益</td>
+<td align="right">¥84,960,000</td>
+<td align="right">¥258,000,000</td>
+<td align="right">¥504,000,000</td>
+</tr>
+<tr>
+<td>純利益</td>
+<td align="right">¥59,472,000</td>
+<td align="right">¥180,600,000</td>
+<td align="right">¥352,800,000</td>
+</tr>
+<tr>
+<td>営業利益率</td>
+<td align="right">53.5%</td>
+<td align="right">64.9%</td>
+<td align="right">69.3%</td>
+</tr>
+</tbody></table>
+<h3>見立て</h3>
+<ul>
+<li>Enterprise大型案件が複数取れた場合の上振れ</li>
+<li>実現には営業力だけでなく、導入体制の増強が前提</li>
+<li>上振れ余地の説明には使えるが、社内予算の本計画値には置きにくい</li>
+</ul>
+<hr>
+<h2>4. 黒字化条件</h2>
+<h3>シンプルな見方</h3>
+<p>黒字化の本質は、<strong>月額粗利で固定費を吸収できる状態</strong>を作れるかです。</p>
+<h3>月次ベースの黒字化目安</h3>
+<p>概算の固定費を月350万〜450万円とみると、以下が目安です。</p>
+<ul>
+<li><strong>Businessプラン 5社前後</strong><br>月額70万円 × 5社 = 350万円/月</li>
+<li><strong>Business 3社 + Enterprise 1社</strong><br>70万円×3 + 150万円×1 = 360万円/月</li>
+<li><strong>Pilot中心なら 10社超</strong><br>30万円×10社 = 300万円/月でやや不足、導入費か開発費の補完が必要</li>
+</ul>
+<h3>現実的な黒字化条件</h3>
+<p>以下のどれかを満たすと黒字化しやすいです。</p>
+<ol>
+<li><strong>Business 5社を継続化</strong>する</li>
+<li><strong>Enterprise 2社 + カスタム開発を四半期1本以上</strong>取る</li>
+<li><strong>新規導入売上に依存しすぎず、MRR比率を50%以上にする</strong></li>
+<li>CS/導入工数をテンプレ化し、売上原価率を25%以下に抑える</li>
+</ol>
+<h3>逆に危険な状態</h3>
+<ul>
+<li>Pilot案件ばかりで月額単価が上がらない</li>
+<li>個別開発を安く受けすぎて粗利が出ない</li>
+<li>導入後の定着支援が弱く、継続率が下がる</li>
+<li>営業が大型案件を追う一方、導入体制が足りず失注する</li>
+</ul>
+<hr>
+<h2>5. 営業で使える要約</h2>
+<h3>ひとことで</h3>
+<p><strong>OpenClaw Enterprise導入支援は、初期導入費で立ち上げコストを回収しつつ、月額支援で継続収益を積み上げ、カスタム開発で大型案件の粗利を取るモデル。</strong></p>
+<h3>営業トーク向け要点</h3>
+<ul>
+<li>入口は Pilot、売上の本命は Business、粗利の上振れは Enterprise</li>
+<li>通常シナリオでは <strong>Year1 黒字化、Year3 売上3.2億円、営業利益1.85億円</strong> が狙える</li>
+<li>黒字化の鍵は <strong>Business 5社前後</strong> または <strong>Enterprise 2社クラス</strong></li>
+<li>値下げ競争ではなく、<strong>導入設計・運用定着・ガバナンス対応</strong>を価値として売るべき</li>
+</ul>
+<h3>提案時に使いやすい言い回し</h3>
+<ul>
+<li>「AIツールを入れる」ではなく、<strong>現場業務を20〜40%圧縮する運用まで伴走する</strong></li>
+<li>「月額ライセンス」ではなく、<strong>導入設計・改善運用・定着支援を含む成果創出支援</strong></li>
+<li>「高い」への返しは、<strong>1チーム1〜2名分の工数削減で十分に投資回収可能</strong>というROIで返す</li>
+</ul>
+<hr>
+<h2>6. 補足: pl-forecast について</h2>
+<p>pl-forecast ツール自体でも3年予測は生成済みですが、デフォルト設定だと成長率が高く、Year3 が現実より大きくなりやすい傾向がありました。<br>そのため本資料では、</p>
+<ul>
+<li>pricing-calculator で原価・価格レンジを確認</li>
+<li>pl-forecast でフォーマットと論点を確認</li>
+<li>最終PLは営業可能性に合わせて補正</li>
+</ul>
+<p>という扱いにしています。</p>
+<hr>
+<h2>7. 次回アップデートで精緻化したい項目</h2>
+<ul>
+<li>競合価格に対する勝ち筋（安い/高いの根拠）</li>
+<li>業界別の受注難易度と平均契約額</li>
+<li>月次チャーンとアップセル率</li>
+<li>1社あたりCS工数</li>
+<li>カスタム開発の平均粗利率</li>
+<li>導入期間（検収まで）の実績値</li>
+</ul>
+
+  <hr>
+  <p><a href="../index.html">← プロジェクトトップに戻る</a></p>
+</body>
+</html>
