@@ -3,7 +3,7 @@
   "title": "OpenClaw 企業導入サービス",
   "description": "企業向けOpenClaw導入・運用支援サービス",
   "created_at": "2026-03-17T11:01:50.518Z",
-  "updated_at": "2026-03-17T11:15:24.976Z",
+  "updated_at": "2026-03-17T12:14:29.443Z",
   "artifacts": [
     {
       "id": "report-1773746124477",
@@ -58,7 +58,54 @@
       "created_at": "2026-03-17T11:15:24.952Z",
       "source_file": "/Users/okamuramasahiro/.openclaw/workspace-builder/projects/openclaw-enterprise-launch/mvp-plan.md",
       "html_file": "other-1773746124952.html"
+    },
+    {
+      "id": "pricing-1773749669191",
+      "type": "pricing",
+      "title": "料金プラン（最終版）",
+      "description": "競合前提を反映した最終補正版",
+      "created_at": "2026-03-17T12:14:29.191Z",
+      "source_file": "/Users/okamuramasahiro/.openclaw/workspace-sales/projects/openclaw-enterprise-launch/refined-pricing.md",
+      "html_file": "pricing-1773749669191.html"
+    },
+    {
+      "id": "report-1773749669300",
+      "type": "report",
+      "title": "3年PL予測（最終版）",
+      "description": "価格補正後の最終PL",
+      "created_at": "2026-03-17T12:14:29.300Z",
+      "source_file": "/Users/okamuramasahiro/.openclaw/workspace-sales/projects/openclaw-enterprise-launch/refined-pl-forecast.md",
+      "html_file": "report-1773749669300.html"
+    },
+    {
+      "id": "report-1773749669415",
+      "type": "report",
+      "title": "営業1ページ提案書（最終版）",
+      "description": "営業でそのまま使える1枚提案書",
+      "created_at": "2026-03-17T12:14:29.415Z",
+      "source_file": "/Users/okamuramasahiro/.openclaw/workspace-sales/projects/openclaw-enterprise-launch/one-page-proposal.md",
+      "html_file": "report-1773749669415.html"
+    },
+    {
+      "id": "slide-deck-html",
+      "type": "slides",
+      "title": "提案スライド（HTML）",
+      "description": "ブラウザで見られる提案スライド",
+      "html_file": "slide-deck.html",
+      "created_at": "2026-03-17T21:15:00+09:00"
+    },
+    {
+      "id": "slide-deck-pptx",
+      "type": "slides",
+      "title": "提案スライド（PPTX）",
+      "description": "ダウンロード用 PowerPoint",
+      "url": "artifacts/openclaw-enterprise-support-deck.pptx",
+      "created_at": "2026-03-17T21:15:00+09:00"
     }
   ],
-  "github": null
+  "github": {
+    "repo": "openclaw-enterprise-launch",
+    "url": "https://github.com/masaoka108/openclaw-enterprise-launch",
+    "pages_url": "https://masaoka108.github.io/openclaw-enterprise-launch/"
+  }
 }
