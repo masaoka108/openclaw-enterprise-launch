@@ -1,119 +1,45 @@
 {
   "id": "openclaw-enterprise-launch",
-  "title": "OpenClaw 企業導入サービス",
-  "description": "企業向けOpenClaw導入・運用支援サービス",
-  "created_at": "2026-03-17T11:01:50.518Z",
-  "updated_at": "2026-03-17T12:24:24.672Z",
+  "title": "OpenClaw 企業導入支援サービス",
+  "description": "100〜1,000名規模の中堅企業向けに、AI導入をPoC止まりにさせず現場定着・ガバナンス整備まで伴走する導入支援サービス",
+  "created_at": "2026-03-17T12:42:37.091Z",
+  "updated_at": "2026-03-17T12:50:00.000Z",
   "artifacts": [
     {
-      "id": "report-1773746124477",
-      "type": "report",
-      "title": "競合調査レポート",
-      "description": "競合8社の比較・相場・差別化ポイント",
-      "created_at": "2026-03-17T11:15:24.477Z",
-      "source_file": "/Users/okamuramasahiro/.openclaw/workspace-researcher/projects/openclaw-enterprise-launch/competitive-analysis.md",
-      "html_file": "report-1773746124477.html"
-    },
-    {
-      "id": "pricing-1773746124574",
-      "type": "pricing",
-      "title": "料金プラン",
-      "description": "Pilot / Business / Enterprise の料金設計",
-      "created_at": "2026-03-17T11:15:24.574Z",
-      "source_file": "/Users/okamuramasahiro/.openclaw/workspace-sales/projects/openclaw-enterprise-launch/pricing.md",
-      "html_file": "pricing-1773746124574.html"
-    },
-    {
-      "id": "report-1773746124667",
-      "type": "report",
-      "title": "3年PL予測",
-      "description": "保守・通常・楽観の3シナリオPL",
-      "created_at": "2026-03-17T11:15:24.667Z",
-      "source_file": "/Users/okamuramasahiro/.openclaw/workspace-sales/projects/openclaw-enterprise-launch/pl-forecast.md",
-      "html_file": "report-1773746124667.html"
-    },
-    {
-      "id": "lp-1773746124763",
-      "type": "lp",
-      "title": "LPワイヤーフレーム",
-      "description": "企業向け導入支援サービスのLP構成案",
-      "created_at": "2026-03-17T11:15:24.763Z",
-      "source_file": "/Users/okamuramasahiro/.openclaw/workspace-uiux/projects/openclaw-enterprise-launch/lp-wireframe.md",
-      "html_file": "lp-1773746124763.html"
-    },
-    {
-      "id": "slides-1773746124857",
-      "type": "slides",
-      "title": "提案スライド構成案",
-      "description": "営業提案用スライドの12枚構成案",
-      "created_at": "2026-03-17T11:15:24.857Z",
-      "source_file": "/Users/okamuramasahiro/.openclaw/workspace-marketing/projects/openclaw-enterprise-launch/slide-outline.md",
-      "html_file": "slides-1773746124857.html"
-    },
-    {
-      "id": "other-1773746124952",
+      "id": "proposal-executive-onepager",
       "type": "other",
-      "title": "MVP構成案",
-      "description": "導入サービスのMVP定義と実装優先順位",
-      "created_at": "2026-03-17T11:15:24.952Z",
-      "source_file": "/Users/okamuramasahiro/.openclaw/workspace-builder/projects/openclaw-enterprise-launch/mvp-plan.md",
-      "html_file": "other-1773746124952.html"
+      "title": "営業向け1ページ提案書（HTML）",
+      "description": "Nano Banana Pro のビジュアルを組み込んだ、営業商談後にそのまま送れる1ページ提案書",
+      "html_file": "executive-proposal.html",
+      "created_at": "2026-03-17T12:50:00.000Z"
     },
     {
-      "id": "pricing-1773749669191",
+      "id": "pricing-reference",
       "type": "pricing",
-      "title": "料金プラン（最終版）",
-      "description": "競合前提を反映した最終補正版",
-      "created_at": "2026-03-17T12:14:29.191Z",
+      "title": "料金設計（根拠資料）",
+      "description": "Pilot / Business / Enterprise の価格設計と値引きポリシー",
       "source_file": "/Users/okamuramasahiro/.openclaw/workspace-sales/projects/openclaw-enterprise-launch/refined-pricing.md",
-      "html_file": "pricing-1773749669191.html"
+      "html_file": "pricing-reference.html",
+      "created_at": "2026-03-17T12:50:00.000Z"
     },
     {
-      "id": "report-1773749669300",
+      "id": "pl-reference",
       "type": "report",
-      "title": "3年PL予測（最終版）",
-      "description": "価格補正後の最終PL",
-      "created_at": "2026-03-17T12:14:29.300Z",
+      "title": "3年PL予測（根拠資料）",
+      "description": "通常シナリオを基準とした収益計画と黒字化条件",
       "source_file": "/Users/okamuramasahiro/.openclaw/workspace-sales/projects/openclaw-enterprise-launch/refined-pl-forecast.md",
-      "html_file": "report-1773749669300.html"
+      "html_file": "pl-reference.html",
+      "created_at": "2026-03-17T12:50:00.000Z"
     },
     {
-      "id": "report-1773749669415",
+      "id": "service-menu-reference",
       "type": "report",
-      "title": "営業1ページ提案書（最終版）",
-      "description": "営業でそのまま使える1枚提案書",
-      "created_at": "2026-03-17T12:14:29.415Z",
-      "source_file": "/Users/okamuramasahiro/.openclaw/workspace-sales/projects/openclaw-enterprise-launch/one-page-proposal.md",
-      "html_file": "report-1773749669415.html"
-    },
-    {
-      "id": "slide-deck-html",
-      "type": "slides",
-      "title": "提案スライド（HTML）",
-      "description": "ブラウザで見られる提案スライド",
-      "html_file": "slide-deck.html",
-      "created_at": "2026-03-17T21:15:00+09:00"
-    },
-    {
-      "id": "slide-deck-pptx",
-      "type": "slides",
-      "title": "提案スライド（PPTX）",
-      "description": "ダウンロード用 PowerPoint",
-      "url": "artifacts/openclaw-enterprise-support-deck.pptx",
-      "created_at": "2026-03-17T21:15:00+09:00"
-    },
-    {
-      "id": "lp-live",
-      "type": "lp",
-      "title": "ランディングページ（実体）",
-      "description": "GitHub Pagesで見えるLP本体",
-      "url": "lp/index.html",
-      "created_at": "2026-03-17T21:24:30+09:00"
+      "title": "正式サービスメニュー",
+      "description": "導入範囲、オプション、契約ポリシーの整理",
+      "source_file": "/Users/okamuramasahiro/.openclaw/workspace-sales/projects/openclaw-enterprise-launch/service-menu.md",
+      "html_file": "service-menu-reference.html",
+      "created_at": "2026-03-17T12:50:00.000Z"
     }
   ],
-  "github": {
-    "repo": "openclaw-enterprise-launch",
-    "url": "https://github.com/masaoka108/openclaw-enterprise-launch",
-    "pages_url": "https://masaoka108.github.io/openclaw-enterprise-launch/"
-  }
+  "github": null
 }

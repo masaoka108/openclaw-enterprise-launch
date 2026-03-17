@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenClaw企業導入支援サービス | 1ページ提案書</title>
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --surface: #ffffff;
+      --ink: #122033;
+      --muted: #59708d;
+      --line: #d8e2f0;
+      --brand: #335eea;
+      --brand2: #5b8cff;
+      --accent: #0ea5a8;
+      --shadow: 0 18px 42px rgba(17, 32, 51, 0.10);
+      --radius: 24px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+      color: var(--ink);
+      background: linear-gradient(180deg, #eef4fb 0%, #f8fbff 42%, #f4f7fb 100%);
+      line-height: 1.7;
+    }
+    .wrap { max-width: 1180px; margin: 0 auto; padding: 32px 20px 72px; }
+    .hero {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 28px;
+      align-items: stretch;
+      margin-bottom: 28px;
+    }
+    .card {
+      background: rgba(255,255,255,0.94);
+      border: 1px solid rgba(216, 226, 240, 0.9);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    .hero-copy { padding: 34px 34px 28px; }
+    .eyebrow {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(51, 94, 234, 0.1);
+      color: var(--brand);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+    h1 {
+      margin: 18px 0 16px;
+      font-size: clamp(32px, 4.4vw, 54px);
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+    }
+    .lead {
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+    .hero-points {
+      display: grid;
+      gap: 12px;
+      margin: 22px 0 26px;
+    }
+    .hero-point {
+      display: grid;
+      grid-template-columns: 30px 1fr;
+      gap: 12px;
+      align-items: start;
+    }
+    .hero-point .dot {
+      width: 30px; height: 30px; border-radius: 50%;
+      display: inline-grid; place-items: center;
+      background: linear-gradient(135deg, var(--brand), var(--accent));
+      color: white; font-weight: 800; font-size: 14px;
+      margin-top: 2px;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .stat {
+      padding: 16px;
+      border-radius: 18px;
+      background: #f8fbff;
+      border: 1px solid var(--line);
+    }
+    .stat strong { display: block; font-size: 24px; color: var(--brand); margin-bottom: 4px; }
+    .visual img, .section-visual img { width: 100%; display: block; height: 100%; object-fit: cover; }
+    .visual { min-height: 100%; background: #dbe7fb; }
+    .grid {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 28px;
+      margin-bottom: 28px;
+    }
+    .section { padding: 28px; }
+    h2 { margin: 0 0 16px; font-size: 26px; letter-spacing: -0.02em; }
+    h3 { margin: 0 0 10px; font-size: 19px; }
+    p { margin: 0 0 12px; }
+    ul { margin: 0; padding-left: 20px; }
+    li + li { margin-top: 8px; }
+    .issue-list, .scope-list, .outcome-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 8px;
+    }
+    .mini {
+      padding: 18px;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: #fbfdff;
+    }
+    .journey {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-top: 14px;
+    }
+    .step {
+      padding: 16px;
+      border-radius: 18px;
+      background: linear-gradient(180deg, #f8fbff 0%, #f1f7ff 100%);
+      border: 1px solid var(--line);
+    }
+    .step .num {
+      display: inline-block;
+      width: 28px; height: 28px; line-height: 28px;
+      text-align: center; border-radius: 999px;
+      background: var(--brand); color: #fff; font-size: 13px; font-weight: 800;
+      margin-bottom: 10px;
+    }
+    .pricing {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 14px;
+    }
+    .price-card {
+      padding: 22px;
+      border-radius: 20px;
+      background: white;
+      border: 1px solid var(--line);
+      position: relative;
+    }
+    .price-card.recommended {
+      border: 2px solid var(--brand);
+      box-shadow: 0 14px 32px rgba(51, 94, 234, 0.12);
+    }
+    .badge {
+      position: absolute; top: 16px; right: 16px;
+      padding: 6px 10px; border-radius: 999px;
+      background: rgba(51,94,234,0.1); color: var(--brand);
+      font-size: 12px; font-weight: 800;
+    }
+    .plan { font-size: 22px; font-weight: 800; margin-bottom: 6px; }
+    .fee { font-size: 28px; font-weight: 800; color: var(--brand); line-height: 1.2; margin: 10px 0 4px; }
+    .subfee { color: var(--muted); font-size: 14px; margin-bottom: 14px; }
+    .highlight {
+      padding: 18px 20px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #0f1d33 0%, #17345e 100%);
+      color: white;
+    }
+    .highlight strong { color: #90f1f3; }
+    .cta {
+      display: flex; align-items: center; justify-content: space-between; gap: 20px;
+      padding: 28px 30px;
+      background: linear-gradient(135deg, var(--brand) 0%, var(--brand2) 48%, var(--accent) 100%);
+      color: white;
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+      margin-top: 8px;
+    }
+    .cta .button {
+      display: inline-block;
+      white-space: nowrap;
+      background: white;
+      color: var(--brand);
+      text-decoration: none;
+      font-weight: 800;
+      padding: 14px 20px;
+      border-radius: 999px;
+    }
+    .footnote { margin-top: 16px; color: var(--muted); font-size: 13px; }
+    @media (max-width: 980px) {
+      .hero, .grid { grid-template-columns: 1fr; }
+      .pricing, .journey, .stats { grid-template-columns: 1fr; }
+      .cta { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="card hero-copy">
+        <span class="eyebrow">OpenClaw 企業導入支援サービス | 1ページ提案書</span>
+        <h1>PoC止まりのAI導入を、<br>現場定着と全社展開へ。</h1>
+        <p class="lead">OpenClawは、AIツールを売るのではなく、<strong>問い合わせ対応・情報検索・定型依頼の初動を仕組み化</strong>し、100〜1,000名規模の中堅企業で導入を前に進める伴走支援サービスです。</p>
+        <div class="hero-points">
+          <div class="hero-point"><span class="dot">1</span><div><strong>導入設計から運用定着まで一気通貫</strong><br>対象業務の選定、権限・運用ルール設計、SaaS連携、レビュー運用まで対応。</div></div>
+          <div class="hero-point"><span class="dot">2</span><div><strong>稟議しやすい商用設計</strong><br>安価なPoC支援より厚く、フルスクラッチSIより導入しやすい価格帯に最適化。</div></div>
+          <div class="hero-point"><span class="dot">3</span><div><strong>全社展開を見据えたガバナンス対応</strong><br>セキュリティ、監査、SSO、承認フローなどの高要件案件にも段階的に対応。</div></div>
+        </div>
+        <div class="stats">
+          <div class="stat"><strong>20〜40%</strong><span>初動業務の工数圧縮を目標</span></div>
+          <div class="stat"><strong>¥80万/月</strong><span>標準提案の中心は Business プラン</span></div>
+          <div class="stat"><strong>Year1 売上 8,200万円</strong><span>通常シナリオの基準計画</span></div>
+        </div>
+      </div>
+      <div class="card visual">
+        <img src="../assets/images/cover.png" alt="OpenClaw企業導入支援サービスのカバーイメージ">
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card section">
+        <h2>いま多くの中堅企業が抱える詰まりどころ</h2>
+        <div class="issue-list">
+          <div class="mini"><strong>AIを試しているが、業務に定着しない</strong><br>ツール導入で止まり、対象業務・運用責任・改善の型が決まらない。</div>
+          <div class="mini"><strong>部門ごとに活用が分散し、全社展開の型がない</strong><br>成果の出るユースケースが属人化し、他部門へ横展開できない。</div>
+          <div class="mini"><strong>セキュリティ・権限・監査が稟議の壁になる</strong><br>本番運用を想定した設計が曖昧なまま、意思決定が止まりやすい。</div>
+          <div class="mini"><strong>導入後に改善運用まで手が回らない</strong><br>現場が忙しく、レビューやチューニングが後回しになり効果が頭打ちになる。</div>
+        </div>
+      </div>
+      <div class="card section-visual">
+        <img src="assets/images/framework.png" alt="診断、Pilot、本格展開、継続改善の流れを示す概念図">
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card section">
+        <h2>OpenClawの進め方</h2>
+        <p>OpenClawは「とりあえずAIを入れる」進め方ではなく、<strong>診断 → Pilot → 本格運用 → 継続改善</strong>の順で、現場と情シスの両方が納得できる導入モデルを作ります。</p>
+        <div class="journey">
+          <div class="step"><span class="num">1</span><strong>診断</strong><br>課題整理、対象業務選定、導入論点の可視化</div>
+          <div class="step"><span class="num">2</span><strong>Pilot</strong><br>1部署で成果が出る運用の型を短期間で設計</div>
+          <div class="step"><span class="num">3</span><strong>本格運用</strong><br>複数部門展開、ルール整備、主要SaaS連携</div>
+          <div class="step"><span class="num">4</span><strong>改善</strong><br>KPIレビュー、追加オンボーディング、個別開発</div>
+        </div>
+      </div>
+      <div class="card section">
+        <h2>提供範囲</h2>
+        <div class="scope-list">
+          <div class="mini"><strong>導入設計</strong><br>ヒアリング、ユースケース選定、ロードマップ、権限設計</div>
+          <div class="mini"><strong>ガバナンス整備</strong><br>セキュリティ、監査、SSO、ログ、承認フローの整理</div>
+          <div class="mini"><strong>連携・運用</strong><br>Slack / Notion / Google Workspace 等との標準連携支援</div>
+          <div class="mini"><strong>定着伴走</strong><br>レビュー会、改善提案、研修、オンボーディング、問い合わせ対応</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card section">
+        <h2>期待できる事業インパクト</h2>
+        <div class="outcome-list">
+          <div class="mini"><strong>現場工数の圧縮</strong><br>問い合わせ対応・情報検索・定型依頼の初動を仕組み化し、日常業務の滞留を減らします。</div>
+          <div class="mini"><strong>導入判断のしやすさ</strong><br>Pilotで成果と運用要件を先に固めることで、本格導入の稟議材料を揃えます。</div>
+          <div class="mini"><strong>全社展開の再現性</strong><br>Business / Enterprise へ移行しやすい設計により、部門ごとの成功を横展開できます。</div>
+        </div>
+        <div class="highlight" style="margin-top:16px;">
+          <strong>PL観点でも価格妥当性を説明可能です。</strong><br>
+          通常シナリオでは Year1 売上 <strong>8,200万円</strong>、営業利益 <strong>2,114万円</strong>、Year3 売上 <strong>3.38億円</strong> を見込めるため、Business中心の価格設計は継続支援の厚みと粗利の両立に適しています。
+        </div>
+      </div>
+      <div class="card section">
+        <h2>料金プラン</h2>
+        <p>値引きで設計を削るのではなく、<strong>対象部門数・定例頻度・連携範囲・SLA</strong>で適切に調整します。</p>
+        <div class="pricing">
+          <div class="price-card">
+            <div class="plan">Pilot</div>
+            <div class="fee">初期60万円</div>
+            <div class="subfee">月額35万円 / 3〜6か月</div>
+            <ul>
+              <li>1部署でのPoC〜初期定着</li>
+              <li>ユースケース2〜3件選定</li>
+              <li>月1回レビュー</li>
+            </ul>
+          </div>
+          <div class="price-card recommended">
+            <span class="badge">標準提案</span>
+            <div class="plan">Business</div>
+            <div class="fee">初期150万円</div>
+            <div class="subfee">月額80万円 / 6〜12か月</div>
+            <ul>
+              <li>複数部門展開・運用定着</li>
+              <li>主要SaaS連携とガイドライン整備</li>
+              <li>月2回レビュー + 改善提案</li>
+            </ul>
+          </div>
+          <div class="price-card">
+            <div class="plan">Enterprise</div>
+            <div class="fee">初期400万円〜</div>
+            <div class="subfee">月額150万円〜 / 12か月〜</div>
+            <ul>
+              <li>全社導入・高ガバナンス案件向け</li>
+              <li>SSO / 監査 / 承認フロー対応</li>
+              <li>専任窓口・SLA個別協議</li>
+            </ul>
+          </div>
+        </div>
+        <p class="footnote">個別開発は 150万円〜。軽微カスタムから社内DB連携・権限連動・業務フロー自動化まで対応します。</p>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div>
+        <h2 style="margin:0 0 8px; color:white;">まずは60分の課題整理ミーティングをご提案します</h2>
+        <p style="margin:0; max-width:760px; color:rgba(255,255,255,0.92);">どの業務から着手すべきか、Pilotで十分か、Businessから入るべきか、セキュリティ・運用上の懸念は何かを整理し、最短で前に進む導入プランをご提示します。</p>
+      </div>
+      <a class="button" href="#">初回打ち合わせを設定する</a>
+    </section>
+  </div>
+</body>
+</html>
